@@ -3,6 +3,7 @@
 auth  --useshadow  --enablemd5
 # System bootloader configuration
 bootloader --location=mbr
+network --bootproto=dhcp --device=eth0
 # Partition clearing information
 clearpart --all --initlabel
 # Use text mode install
@@ -48,6 +49,8 @@ $SNIPPET('pre_install_network_config')
 $SNIPPET('pre_anamon')
 
 %packages
+ruby-libs
+ruby-rdoc
 $SNIPPET('func_install_if_enabled')
 $SNIPPET('puppet_install_if_enabled')
 

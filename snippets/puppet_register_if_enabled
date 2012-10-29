@@ -1,7 +1,10 @@
 #if $str($getVar('puppet_auto_setup','')) == "1"
 # generate puppet certificates and trigger a signing request, but
 # don't wait for signing to complete
-/usr/sbin/puppetd --test --waitforcert 0
+/sbin/chkconfig ntpd on
+
+#start puppet daemon after time is synched
+/usr/sbin/puppetd --test --server=infra.cloudstack.org --waitforcert 0 -l /var/log/puppet/puppet.log -d --onetime
 
 # turn puppet service on for reboot
 /sbin/chkconfig puppet on
