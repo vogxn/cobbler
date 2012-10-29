@@ -1,0 +1,3 @@
+/bin/echo "10.223.75.10	infra.cloudstack.org">/etc/hosts
+/bin/echo "10.223.78.2	infra.cloudstack.org">>/etc/hosts
+/bin/echo "10.223.78.130	infra.cloudstack.org">>/etc/hosts
