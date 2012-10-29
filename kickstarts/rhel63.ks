@@ -58,7 +58,7 @@ $SNIPPET('puppet_install_if_enabled')
 
 %post
 $SNIPPET('log_ks_post')
-ntpdate infra.cloudstack.org
+#ntpdate infra.cloudstack.org
 wget -O /etc/puppet/puppet.conf http://infra.cloudstack.org/puppet.conf
 # Start yum configuration 
 $yum_config_stanza

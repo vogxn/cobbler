@@ -4,7 +4,8 @@
 /sbin/chkconfig ntpd on
 
 #start puppet daemon after time is synched
-/usr/sbin/puppetd --server=infra.cloudstack.org --waitforcert 0 -l /var/log/puppet/puppet.log --onetime
+#/usr/sbin/puppetd --server=infra.cloudstack.org --waitforcert 0 -l /var/log/puppet/puppet.log 
+puppet agent --test --server=infra.cloudstack.org --waitforcert 0 -l /var/log/puppet/puppet.log  
 
 # turn puppet service on for reboot
 /sbin/chkconfig puppet on

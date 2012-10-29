@@ -66,7 +66,7 @@ $yum_config_stanza
 $SNIPPET('post_install_kernel_options')
 $SNIPPET('post_install_network_config')
 $SNIPPET('host_inject')
-ntpdate infra.cloudstack.org
+#ntpdate infra.cloudstack.org
 wget -O /etc/puppet/puppet.conf http://infra.cloudstack.org/puppet.conf
 $SNIPPET('func_register_if_enabled')
 $SNIPPET('puppet_register_if_enabled')
